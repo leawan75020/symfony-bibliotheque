@@ -1,0 +1,20 @@
+
+{% extends 'base.html.twig' %}
+{% block title %}Liste des auteurs!{% endblock %}
+
+{% block body %}
+
+
+  {{include ('_menu.html.twig')}}
+  <h1>Liste des auteurs:</h1>
+
+  {% for auteur in auteurs %}
+    <h3> {{auteur.name}} </h3>
+    <p> description: {{auteur.description}} </p>
+    <p> imageUrl: {{auteur.imageUrl}} </p>
+    <a href="{{path('app_auteur_update', {id: auteur.id})}}"> Modify</a>
+    <a href="{{path('app_auteur_remove', {id: auteur.id})}}"> Delete</a>
+
+  {% endfor %}
+
+{% endblock %}

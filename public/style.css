@@ -1,0 +1,92 @@
+body {
+  background-color: rgb(106, 203, 227);
+}
+h1 {
+  border-radius: 10%;
+  /* background-color: bisque; */
+  border-color: blueviolet;
+  justify-content: center;
+}
+p {
+  border-radius: 10%;
+  background-color: bisque;
+  border-color: blueviolet;
+  display: contents;
+  justify-content: center;
+}
+form {
+  border-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 30px;
+}
+label {
+  color: rgb(2, 20, 75);
+  margin: 10px;
+}
+input {
+  border-radius: 10%;
+  background-color: bisque;
+  border-color: blueviolet;
+}
+textarea {
+  border-radius: 10%;
+  background-color: bisque;
+  border-color: blueviolet;
+}
+button {
+  margin-top: 10px;
+  border-radius: 10%;
+  background-color: rgb(69, 190, 9);
+  border-color: blueviolet;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #e7e7f0;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #6b06a1;
+}
+
+nav {
+  background-color: #f9dbbb;
+  border: 1px solid black;
+  border-radius: 1%;
+  display: flex;
+  align-content: left;
+  margin: 20px;
+  padding: 20px;
+}
+
+.form {
+  background-color: #bad7e9;
+  border: 1px solid black;
+  margin: 30px;
+  padding: 10px;
+}
+
+.list {
+  background-color: #fcffe7;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+img {
+  width: 150px;
+  height: 100px;
+}
+
+.descr {
+  color: #3f497f;
+}

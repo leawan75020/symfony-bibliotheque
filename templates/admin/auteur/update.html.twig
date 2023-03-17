@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block title %}update auteur!{% endblock %} 
+{%block body %} 
+
+{{include ('_menu.html.twig')}}
+<h1>Nouvelle auteur</h1>
+
+<form method="POST">
+  <label for="name">NOM:</label>
+  <input type="text" name="name" id="name" value="{{auteur.name}}" />
+
+  <label for="description">Description:</label>
+  <textarea name="description" id="desciption" >{{auteur.description}}</textarea>
+
+  <label for="imageUrl">URL de Image:</label>
+  <input type="url" name="imageUrl" id="imageUrl" value="{{auteur.imageUrl}}"/>
+
+  <button type="submit">Modify la auteur</button>
+</form>
+
+ {% endblock %}
