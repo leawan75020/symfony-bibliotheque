@@ -9,11 +9,16 @@
   <h1>Liste des auteurs:</h1>
 
   {% for auteur in auteurs %}
-    <h3> {{auteur.name}} </h3>
-    <p> description: {{auteur.description}} </p>
-    <p> imageUrl: {{auteur.imageUrl}} </p>
-    <a href="{{path('app_auteur_update', {id: auteur.id})}}"> Modify</a>
-    <a href="{{path('app_auteur_remove', {id: auteur.id})}}"> Delete</a>
+    <div >  
+      <h3> {{auteur.name}} </h3>
+      <p> description: {{auteur.description}} </p>
+      <p>
+        <img src="{{ auteur.imageUrl }}" alt="{{ auteur.name }}" />
+      </p>
+    
+      <a href="{{path('app_admin_auteur_update', {id: auteur.id})}}"> Modify</a>
+      <a href="{{path('app_admin_auteur_remove', {id: auteur.id})}}"> Delete</a>
+    </div> 
 
   {% endfor %}
 

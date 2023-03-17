@@ -67,26 +67,18 @@ nav {
   margin: 20px;
   padding: 20px;
 }
-
-.form {
-  background-color: #bad7e9;
+div {
+  border-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   border: 1px solid black;
-  margin: 30px;
-  padding: 10px;
-}
-
-.list {
-  background-color: #fcffe7;
-  border: 1px solid black;
-  padding: 10px;
   margin: 10px;
+  padding: 30px;
 }
 
 img {
   width: 150px;
   height: 100px;
-}
-
-.descr {
-  color: #3f497f;
 }

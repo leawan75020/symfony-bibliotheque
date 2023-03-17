@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AuteurController extends AbstractController
 {
-    #[Route('/admin/auteur/new', name: 'app_admin_create')]
+    #[Route('/admin/auteur/new', name: 'app_admin_auteur_create')]
     public function create(Request $request, AuteurRepository $repository): Response
     {
         if($request->isMethod('POST')){
@@ -30,7 +30,7 @@ class AuteurController extends AbstractController
             $repository->save($auteur, true);
 
             //redirection vers la liste des auteurs
-            return $this->redirectToRoute('app_admin_list');
+            return $this->redirectToRoute('app_admin_auteur_list');
         }
         //affichage de la vue qui contient le formulaire
         return $this->render('admin/auteur/create.html.twig');
@@ -38,7 +38,7 @@ class AuteurController extends AbstractController
         
     }
 
-    #[Route('/admin/auteur/list', name:'app_admin_list')]
+    #[Route('/admin/auteur/list', name:'app_admin_auteur_list')]
     public function list( AuteurRepository $repository) :Response
     {
         //recuperer la liste des auteur da la BD via le repo
@@ -48,7 +48,7 @@ class AuteurController extends AbstractController
         return $this->render('admin/auteur/list.html.twig', ['auteurs'=> $auteurs]);
     }
 
-    #[Route('/admin/auteur/{id}/modify', name:'app_auteur_update')]
+    #[Route('/admin/auteur/{id}/modify', name:'app_admin_auteur_update')]
     public function update( int $id, AuteurRepository $repository, Request $request) :Response
     {
         //recupere la auteur avec l'id 
@@ -68,7 +68,7 @@ class AuteurController extends AbstractController
             //enregistrer les donnée dans la BD  via le repo
              $repository->save($auteur, true);
             //redirection vers la liste des auteurs
-            return $this->redirectToRoute('app_admin_list');
+            return $this->redirectToRoute('app_admin_auteur_list');
         }
         //affichage du form de modify
         return $this->render('admin/auteur/update.html.twig',[
@@ -76,7 +76,7 @@ class AuteurController extends AbstractController
         ] );
     } 
     
-    #[Route('/admin/auteur/{id}/delete', name:'app_auteur_remove')]
+    #[Route('/admin/auteur/{id}/delete', name:'app_admin_auteur_remove')]
     public function remove( int $id, AuteurRepository $repository) :Response
     {
         //recupere la auteur a del selon l'id 
@@ -86,7 +86,7 @@ class AuteurController extends AbstractController
         $repository->remove($auteur, true);
         //redirection vers la liste des auteurs
        
-        return $this->redirectToRoute('app_admin_list');
+        return $this->redirectToRoute('app_admin_auteur_list');
 
     }
 
